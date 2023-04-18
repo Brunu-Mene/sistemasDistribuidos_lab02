@@ -18,8 +18,10 @@ def define_model(input_shape,num_classes):
     return model
 
 
-def loadData():
-    (x_train, y_train), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
+def loadData(cid, n):
+    mnist = tf.keras.datasets.mnist
+    
+    (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
     x_train=x_train.reshape(x_train.shape[0], x_train.shape[1], x_train.shape[2], 1)
     x_train=x_train / 255.0
@@ -28,5 +30,11 @@ def loadData():
 
     y_train = tf.one_hot(y_train.astype(np.int32), depth=10)
     y_test = tf.one_hot(y_test.astype(np.int32), depth=10)
+    
+    # Divide the data into cid parts
+    x_train_parts = np.array_split(x_train, n)
+    y_train_parts = np.array_split(y_train, n)
+    x_test_parts = np.array_split(x_test, n)
+    y_test_parts = np.array_split(y_test, n)
 
-    return x_train, x_test, y_train, y_test
+    return x_train_parts[cid], x_test_parts[cid], y_train_parts[cid], y_test_parts[cid]
