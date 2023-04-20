@@ -14,4 +14,4 @@ if __name__ == '__main__':
     strategy = fl.server.strategy.FedAvg(min_available_clients=5, evaluate_metrics_aggregation_fn=weighted_average)
 
     server_address = "[::]:8081"
-    fl.server.start_server(server_address=server_address, config = fl.server.ServerConfig(num_rounds=10), strategy = strategy)
+    fl.server.start_server(server_address=server_address, config = fl.server.ServerConfig(num_rounds=20), strategy = strategy)
