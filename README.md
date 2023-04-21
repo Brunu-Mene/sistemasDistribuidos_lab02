@@ -17,14 +17,15 @@ $ python3 client.py
 
 ---
 ## Link para o vídeo no Drive
+> https://drive.google.com/file/d/1kNC-liz9AograaGc4B7t5418aDP2DrDF/view?usp=sharing
 
 
 ---
 ## Implementação, Testes e Conclusões
 
-A implementação das duas atividades foi feita no Colab:
-https://colab.research.google.com/drive/1bcGdrOwBRgmUJU8Pe2kQGStod6fkJh2Y?usp=sharing#scrollTo=M-zIAMOarmFR
+A implementação completa da primeira atividade e os resultados capturados na segunda foram computados no Colab, a visualização pode ser feita atravez do link:
+> https://colab.research.google.com/drive/1bcGdrOwBRgmUJU8Pe2kQGStod6fkJh2Y?usp=sharing#scrollTo=M-zIAMOarmFR
 
-a
+Para as conclusões gerais, podemos destacar que a abordagem federada é capaz de produzir modelos eficientes sem que haja necessidade de se compartilhar os dados com um servidor central, tornando-se assim uma implementação bem interessantes para determinados casos em que a privacidade do cliente é algo fundamental.
 
 
